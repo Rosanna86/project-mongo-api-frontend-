@@ -10,17 +10,19 @@ export const BookList = () => {
     }, [])
   
     const fetchListBooks = () => {
-      fetch('https://rosanna-book-mongo-api.herokuapp.com/')
+      fetch('https://rosanna-book-mongo-api.herokuapp.com/books')
         .then((res) => res.json())
         .then((data) => setListBooks(data))
     }
-}
 
 return (
     <BookSection>
     {listBooks.map((books) => (
-      <BookCard key={books.id}>    
+      <BookCard key={books.bookID}>
+        {books.title}    
+        <img src={`https://books.google.com/books?vid=ISBN${books.isbn}&printsec=frontcover`} alt="covers of books"></img>
         </BookCard>
       ))}
     </BookSection>
-  )
+  )}
+    

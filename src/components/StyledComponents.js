@@ -1,18 +1,26 @@
 import styled from 'styled-components'
 
 export const BookSection = styled.section`
-  width: 80%;
-  display: grid;
-  grid-gap: 20px 20px;
-  position: absolute;
-  top: 80vh;
-  @media (min-width: 650px) {
-    grid-template-columns: 50% 50%;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 1fr;
+	padding: 10px;
+  & img {
+    width: 100%;
+}
+@media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  /* desktop */
+  @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
   }
-`
-export const BookCard = styled.div`
+`;
+
+export const BookCard = styled.p`
   border-radius: 15px;
-  height: 300px;
+  height: 200px;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -20,19 +28,7 @@ export const BookCard = styled.div`
   text-align: center;
   justify-content: space-around;
   align-items: center;
+  color:red;
   background-color: rgba(255, 255, 255, 0.6);
-  h2 {
-    font-size: 20px;
-  }
-  p {
-    font-size: 18px;
-    margin: 0;
-  }
-  span {
-    font-size: 13px;
-    background-color: #b9314f;
-    border-radius: 10px;
-    padding: 5px;
-    color: #fff;
-  }
-`
+  font-family: 'Rubik', sans-serif;
+`;

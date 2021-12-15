@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { BookList } from 'components/BookList'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 
 export const App = () => {
   return (
-    <Routes>
-        <Route path='/music' element={<MusicList />} />
-    <div>
-      Find me in src/app.js!
-    </div>
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+      <Route exact path="/"  element={<BookList />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
