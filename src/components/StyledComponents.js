@@ -1,11 +1,23 @@
 import styled from 'styled-components'
 
+export const Heading = styled.div`
+height: 50px;
+font-size: 35px;
+color:white;
+background-color: black;
+text-align: center;
+padding: 20px 0 30px 0;
+font-family: 'Bad Script', cursive;
+`;
+
+
 export const BookSection = styled.section`
 	display: grid;
 	grid-gap: 5px;
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: 1fr;
 `;
+
 
 export const BookCard = styled.div`
   margin: 20px;
