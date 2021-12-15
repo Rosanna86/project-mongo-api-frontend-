@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { BookSection, BookCard, BookBackground } from './StyledComponents'
-
+import { BookSection, BookCard } from './StyledComponents'
+import {  BookBackground } from './BookBackground';
 
 export const BookList = () => {
     const [listBooks, setListBooks] = useState([])
