@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BookSection, BookCard } from './StyledComponents'
+import { BookSection, BookCard, BookBackground } from './StyledComponents'
 
 
 export const BookList = () => {
@@ -17,12 +17,15 @@ export const BookList = () => {
 
 return (
     <BookSection>
+        <BookBackground backgroundImage={"../assets/img/books-unsplash.jpg"}>
     {listBooks.map((books) => (
       <BookCard key={books.bookID}>
-        {books.title}    
-        <img src={`https://books.google.com/books?vid=ISBN${books.isbn}&printsec=frontcover`} alt="covers of books"></img>
+        <h1>{books.title}</h1> 
+        <h2>{books.authors}</h2> 
+        <h3>Average rating: {books.average_rating}</h3>     
         </BookCard>
       ))}
+      </BookBackground>
     </BookSection>
   )}
     
