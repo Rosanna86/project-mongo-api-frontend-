@@ -18,7 +18,6 @@ export const BookSection = styled.section`
 	grid-template-rows: 1fr;
 `;
 
-
 export const BookCard = styled.div`
   margin: 20px;
   text-align: center;
